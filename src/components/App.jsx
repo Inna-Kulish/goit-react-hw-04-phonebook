@@ -23,7 +23,7 @@ const App = () => {
     if (existContact(name)) {
       return alert(`${name} is already is contacts.`);
     }
-    setContacts([contact, ...contacts]);
+    setContacts(prev => [contact, ...prev]);
   };
   
   const existContact = name => {
